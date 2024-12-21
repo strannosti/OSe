@@ -1,7 +1,7 @@
 #!/bin/bash
 
 GIT_REPO="https://github.com/DireSky/OSEExam.git"
-APP_NAME="AAAB"
+APP_NAME="OSEExam"
 APP_DIR="/var/www/$APP_NAME" 
 PYTHON="python3"
 
@@ -17,7 +17,7 @@ if [ "$(id -u)" -ne 0 ]; then
   exit 1
 fi
 # проверяет запущена ли команда от имени админа , Символ $ используется для вызова значения переменной.
-
+#  система управления пакетами,
 apt update && apt install -y $PYTHON $PYTHON-venv git curl net-tools || {
   echo "Package installation error" | tee -a $LOG
   exit 1
